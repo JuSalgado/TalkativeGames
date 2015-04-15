@@ -13,6 +13,11 @@
 		1E666C551ADECCDE004B4191 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E666C541ADECCDE004B4191 /* Images.xcassets */; };
 		1E666C581ADECCDE004B4191 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E666C561ADECCDE004B4191 /* LaunchScreen.xib */; };
 		1E666C641ADECCDF004B4191 /* TalkativeGamesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E666C631ADECCDF004B4191 /* TalkativeGamesTests.swift */; };
+		1E666C6F1ADECF34004B4191 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E666C6E1ADECF34004B4191 /* background.png */; };
+		1E666C711ADECF44004B4191 /* meninao.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E666C701ADECF44004B4191 /* meninao.png */; };
+		1E666C731ADED5AB004B4191 /* SeedGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E666C721ADED5AB004B4191 /* SeedGame.swift */; };
+		1E666C751ADED6B1004B4191 /* background_viewers.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E666C741ADED6B1004B4191 /* background_viewers.png */; };
+		1E666C771ADEE4A3004B4191 /* GamesMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E666C761ADEE4A3004B4191 /* GamesMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,11 @@
 		1E666C5D1ADECCDF004B4191 /* TalkativeGamesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalkativeGamesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E666C621ADECCDF004B4191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E666C631ADECCDF004B4191 /* TalkativeGamesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkativeGamesTests.swift; sourceTree = "<group>"; };
+		1E666C6E1ADECF34004B4191 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		1E666C701ADECF44004B4191 /* meninao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meninao.png; sourceTree = "<group>"; };
+		1E666C721ADED5AB004B4191 /* SeedGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeedGame.swift; sourceTree = "<group>"; };
+		1E666C741ADED6B1004B4191 /* background_viewers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_viewers.png; sourceTree = "<group>"; };
+		1E666C761ADEE4A3004B4191 /* GamesMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +87,9 @@
 		1E666C4A1ADECCDE004B4191 /* TalkativeGames */ = {
 			isa = PBXGroup;
 			children = (
+				1E666C6D1ADECF20004B4191 /* Images */,
 				1E666C4D1ADECCDE004B4191 /* AppDelegate.swift */,
+				1E666C721ADED5AB004B4191 /* SeedGame.swift */,
 				1E666C4F1ADECCDE004B4191 /* ViewController.swift */,
 				1E666C511ADECCDE004B4191 /* Main.storyboard */,
 				1E666C541ADECCDE004B4191 /* Images.xcassets */,
@@ -110,6 +122,17 @@
 				1E666C621ADECCDF004B4191 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1E666C6D1ADECF20004B4191 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				1E666C741ADED6B1004B4191 /* background_viewers.png */,
+				1E666C701ADECF44004B4191 /* meninao.png */,
+				1E666C6E1ADECF34004B4191 /* background.png */,
+				1E666C761ADEE4A3004B4191 /* GamesMenu.swift */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +216,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E666C531ADECCDE004B4191 /* Main.storyboard in Resources */,
+				1E666C6F1ADECF34004B4191 /* background.png in Resources */,
 				1E666C581ADECCDE004B4191 /* LaunchScreen.xib in Resources */,
+				1E666C751ADED6B1004B4191 /* background_viewers.png in Resources */,
+				1E666C711ADECF44004B4191 /* meninao.png in Resources */,
 				1E666C551ADECCDE004B4191 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,7 +238,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E666C771ADEE4A3004B4191 /* GamesMenu.swift in Sources */,
 				1E666C501ADECCDE004B4191 /* ViewController.swift in Sources */,
+				1E666C731ADED5AB004B4191 /* SeedGame.swift in Sources */,
 				1E666C4E1ADECCDE004B4191 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
