@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E666C4E1ADECCDE004B4191 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E666C4D1ADECCDE004B4191 /* AppDelegate.swift */; };
+		1E666C501ADECCDE004B4191 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E666C4F1ADECCDE004B4191 /* ViewController.swift */; };
+		1E666C531ADECCDE004B4191 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E666C511ADECCDE004B4191 /* Main.storyboard */; };
+		1E666C551ADECCDE004B4191 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E666C541ADECCDE004B4191 /* Images.xcassets */; };
+		1E666C581ADECCDE004B4191 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E666C561ADECCDE004B4191 /* LaunchScreen.xib */; };
+		1E666C641ADECCDF004B4191 /* TalkativeGamesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E666C631ADECCDF004B4191 /* TalkativeGamesTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1E666C5E1ADECCDF004B4191 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E666C401ADECCDE004B4191 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E666C471ADECCDE004B4191;
+			remoteInfo = TalkativeGames;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1E666C481ADECCDE004B4191 /* TalkativeGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalkativeGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E666C4C1ADECCDE004B4191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E666C4D1ADECCDE004B4191 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1E666C4F1ADECCDE004B4191 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1E666C521ADECCDE004B4191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1E666C541ADECCDE004B4191 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1E666C571ADECCDE004B4191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		1E666C5D1ADECCDF004B4191 /* TalkativeGamesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalkativeGamesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E666C621ADECCDF004B4191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E666C631ADECCDF004B4191 /* TalkativeGamesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkativeGamesTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E666C451ADECCDE004B4191 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E666C5A1ADECCDF004B4191 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E666C3F1ADECCDE004B4191 = {
+			isa = PBXGroup;
+			children = (
+				1E666C4A1ADECCDE004B4191 /* TalkativeGames */,
+				1E666C601ADECCDF004B4191 /* TalkativeGamesTests */,
+				1E666C491ADECCDE004B4191 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1E666C491ADECCDE004B4191 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E666C481ADECCDE004B4191 /* TalkativeGames.app */,
+				1E666C5D1ADECCDF004B4191 /* TalkativeGamesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E666C4A1ADECCDE004B4191 /* TalkativeGames */ = {
+			isa = PBXGroup;
+			children = (
+				1E666C4D1ADECCDE004B4191 /* AppDelegate.swift */,
+				1E666C4F1ADECCDE004B4191 /* ViewController.swift */,
+				1E666C511ADECCDE004B4191 /* Main.storyboard */,
+				1E666C541ADECCDE004B4191 /* Images.xcassets */,
+				1E666C561ADECCDE004B4191 /* LaunchScreen.xib */,
+				1E666C4B1ADECCDE004B4191 /* Supporting Files */,
+			);
+			path = TalkativeGames;
+			sourceTree = "<group>";
+		};
+		1E666C4B1ADECCDE004B4191 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E666C4C1ADECCDE004B4191 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1E666C601ADECCDF004B4191 /* TalkativeGamesTests */ = {
+			isa = PBXGroup;
+			children = (
+				1E666C631ADECCDF004B4191 /* TalkativeGamesTests.swift */,
+				1E666C611ADECCDF004B4191 /* Supporting Files */,
+			);
+			path = TalkativeGamesTests;
+			sourceTree = "<group>";
+		};
+		1E666C611ADECCDF004B4191 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E666C621ADECCDF004B4191 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1E666C471ADECCDE004B4191 /* TalkativeGames */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E666C671ADECCDF004B4191 /* Build configuration list for PBXNativeTarget "TalkativeGames" */;
+			buildPhases = (
+				1E666C441ADECCDE004B4191 /* Sources */,
+				1E666C451ADECCDE004B4191 /* Frameworks */,
+				1E666C461ADECCDE004B4191 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TalkativeGames;
+			productName = TalkativeGames;
+			productReference = 1E666C481ADECCDE004B4191 /* TalkativeGames.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1E666C5C1ADECCDF004B4191 /* TalkativeGamesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E666C6A1ADECCDF004B4191 /* Build configuration list for PBXNativeTarget "TalkativeGamesTests" */;
+			buildPhases = (
+				1E666C591ADECCDF004B4191 /* Sources */,
+				1E666C5A1ADECCDF004B4191 /* Frameworks */,
+				1E666C5B1ADECCDF004B4191 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E666C5F1ADECCDF004B4191 /* PBXTargetDependency */,
+			);
+			name = TalkativeGamesTests;
+			productName = TalkativeGamesTests;
+			productReference = 1E666C5D1ADECCDF004B4191 /* TalkativeGamesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1E666C401ADECCDE004B4191 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Juliana Salgado";
+				TargetAttributes = {
+					1E666C471ADECCDE004B4191 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					1E666C5C1ADECCDF004B4191 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 1E666C471ADECCDE004B4191;
+					};
+				};
+			};
+			buildConfigurationList = 1E666C431ADECCDE004B4191 /* Build configuration list for PBXProject "TalkativeGames" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1E666C3F1ADECCDE004B4191;
+			productRefGroup = 1E666C491ADECCDE004B4191 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1E666C471ADECCDE004B4191 /* TalkativeGames */,
+				1E666C5C1ADECCDF004B4191 /* TalkativeGamesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E666C461ADECCDE004B4191 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E666C531ADECCDE004B4191 /* Main.storyboard in Resources */,
+				1E666C581ADECCDE004B4191 /* LaunchScreen.xib in Resources */,
+				1E666C551ADECCDE004B4191 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E666C5B1ADECCDF004B4191 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E666C441ADECCDE004B4191 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E666C501ADECCDE004B4191 /* ViewController.swift in Sources */,
+				1E666C4E1ADECCDE004B4191 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E666C591ADECCDF004B4191 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E666C641ADECCDF004B4191 /* TalkativeGamesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1E666C5F1ADECCDF004B4191 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E666C471ADECCDE004B4191 /* TalkativeGames */;
+			targetProxy = 1E666C5E1ADECCDF004B4191 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1E666C511ADECCDE004B4191 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E666C521ADECCDE004B4191 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1E666C561ADECCDE004B4191 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E666C571ADECCDE004B4191 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1E666C651ADECCDF004B4191 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E666C661ADECCDF004B4191 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E666C681ADECCDF004B4191 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TalkativeGames/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1E666C691ADECCDF004B4191 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TalkativeGames/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1E666C6B1ADECCDF004B4191 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TalkativeGamesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TalkativeGames.app/TalkativeGames";
+			};
+			name = Debug;
+		};
+		1E666C6C1ADECCDF004B4191 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TalkativeGamesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TalkativeGames.app/TalkativeGames";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E666C431ADECCDE004B4191 /* Build configuration list for PBXProject "TalkativeGames" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E666C651ADECCDF004B4191 /* Debug */,
+				1E666C661ADECCDF004B4191 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E666C671ADECCDF004B4191 /* Build configuration list for PBXNativeTarget "TalkativeGames" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E666C681ADECCDF004B4191 /* Debug */,
+				1E666C691ADECCDF004B4191 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1E666C6A1ADECCDF004B4191 /* Build configuration list for PBXNativeTarget "TalkativeGamesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E666C6B1ADECCDF004B4191 /* Debug */,
+				1E666C6C1ADECCDF004B4191 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1E666C401ADECCDE004B4191 /* Project object */;
+}
