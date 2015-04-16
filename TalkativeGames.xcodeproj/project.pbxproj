@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1E666C4E1ADECCDE004B4191 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E666C4D1ADECCDE004B4191 /* AppDelegate.swift */; };
-		1E666C501ADECCDE004B4191 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E666C4F1ADECCDE004B4191 /* ViewController.swift */; };
 		1E666C531ADECCDE004B4191 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E666C511ADECCDE004B4191 /* Main.storyboard */; };
 		1E666C551ADECCDE004B4191 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E666C541ADECCDE004B4191 /* Images.xcassets */; };
 		1E666C581ADECCDE004B4191 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E666C561ADECCDE004B4191 /* LaunchScreen.xib */; };
@@ -18,6 +17,8 @@
 		1E666C731ADED5AB004B4191 /* SeedGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E666C721ADED5AB004B4191 /* SeedGame.swift */; };
 		1E666C751ADED6B1004B4191 /* background_viewers.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E666C741ADED6B1004B4191 /* background_viewers.png */; };
 		1E666C771ADEE4A3004B4191 /* GamesMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E666C761ADEE4A3004B4191 /* GamesMenu.swift */; };
+		1E666C7D1ADEF105004B4191 /* SeedPageItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E666C7C1ADEF105004B4191 /* SeedPageItemController.swift */; };
+		1E666C7F1ADEF848004B4191 /* SeedInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E666C7E1ADEF848004B4191 /* SeedInfoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +35,6 @@
 		1E666C481ADECCDE004B4191 /* TalkativeGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalkativeGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E666C4C1ADECCDE004B4191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E666C4D1ADECCDE004B4191 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1E666C4F1ADECCDE004B4191 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1E666C521ADECCDE004B4191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1E666C541ADECCDE004B4191 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1E666C571ADECCDE004B4191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -46,6 +46,8 @@
 		1E666C721ADED5AB004B4191 /* SeedGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeedGame.swift; sourceTree = "<group>"; };
 		1E666C741ADED6B1004B4191 /* background_viewers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_viewers.png; sourceTree = "<group>"; };
 		1E666C761ADEE4A3004B4191 /* GamesMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesMenu.swift; sourceTree = "<group>"; };
+		1E666C7C1ADEF105004B4191 /* SeedPageItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeedPageItemController.swift; sourceTree = "<group>"; };
+		1E666C7E1ADEF848004B4191 /* SeedInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeedInfoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,12 +91,14 @@
 			children = (
 				1E666C6D1ADECF20004B4191 /* Images */,
 				1E666C4D1ADECCDE004B4191 /* AppDelegate.swift */,
+				1E666C761ADEE4A3004B4191 /* GamesMenu.swift */,
 				1E666C721ADED5AB004B4191 /* SeedGame.swift */,
-				1E666C4F1ADECCDE004B4191 /* ViewController.swift */,
 				1E666C511ADECCDE004B4191 /* Main.storyboard */,
 				1E666C541ADECCDE004B4191 /* Images.xcassets */,
 				1E666C561ADECCDE004B4191 /* LaunchScreen.xib */,
 				1E666C4B1ADECCDE004B4191 /* Supporting Files */,
+				1E666C7C1ADEF105004B4191 /* SeedPageItemController.swift */,
+				1E666C7E1ADEF848004B4191 /* SeedInfoController.swift */,
 			);
 			path = TalkativeGames;
 			sourceTree = "<group>";
@@ -130,7 +134,6 @@
 				1E666C741ADED6B1004B4191 /* background_viewers.png */,
 				1E666C701ADECF44004B4191 /* meninao.png */,
 				1E666C6E1ADECF34004B4191 /* background.png */,
-				1E666C761ADEE4A3004B4191 /* GamesMenu.swift */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -239,7 +242,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E666C771ADEE4A3004B4191 /* GamesMenu.swift in Sources */,
-				1E666C501ADECCDE004B4191 /* ViewController.swift in Sources */,
+				1E666C7D1ADEF105004B4191 /* SeedPageItemController.swift in Sources */,
+				1E666C7F1ADEF848004B4191 /* SeedInfoController.swift in Sources */,
 				1E666C731ADED5AB004B4191 /* SeedGame.swift in Sources */,
 				1E666C4E1ADECCDE004B4191 /* AppDelegate.swift in Sources */,
 			);
@@ -439,6 +443,7 @@
 				1E666C691ADECCDF004B4191 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1E666C6A1ADECCDF004B4191 /* Build configuration list for PBXNativeTarget "TalkativeGamesTests" */ = {
 			isa = XCConfigurationList;
@@ -447,6 +452,7 @@
 				1E666C6C1ADECCDF004B4191 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
