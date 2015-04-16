@@ -10,71 +10,71 @@ import UIKit
 
 class SeedGame: UIViewController {
     
-    @IBOutlet weak var firstImage: UIImageView!
-    @IBOutlet weak var firstBlock: UIImageView!
+    var firstCardModel : SeedCard? = nil
+    var secCardModel : SeedCard? = nil
+    var thirdCardModel : SeedCard? = nil
+    var fourthCardModel : SeedCard? = nil
     
-    @IBOutlet weak var text: UILabel!
-    var location = CGPoint(x: 0,y: 0)
-    /*
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        var touch : UITouch! = touches.first as? UITouch
-        
-        location = touch.locationInView(self.view!)
-        
-        firstImage.center = location
-    }
-    */
-    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
-        
-        var touch : UITouch! = touches.first as? UITouch
-        
-        location = touch.locationInView(self.view!)
-        
-        firstImage.center = location
-    }
+    var firstBoardModel : SeedBoard? = nil
+    var secBoardModel : SeedBoard? = nil
+    var thirdBoardModel : SeedBoard? = nil
+    var fourthBoardModel : SeedBoard? = nil
     
-    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+    @IBOutlet weak var forthBoard: UIButton!
+    @IBOutlet weak var thirdBoard: UIButton!
+    @IBOutlet weak var secondBoard: UIButton!
+    @IBOutlet weak var firstBoard: UIButton!
     
+    @IBOutlet weak var fourthCard: UIButton!
+    @IBOutlet weak var thirdCard: UIButton!
+    @IBOutlet weak var secondCard: UIButton!
+    @IBOutlet weak var firstCard: UIButton!
+    
+    
+    @IBAction func clickedBoard(sender: AnyObject) {
+    
+       //if imagem é vazia do botao add o card selecionado
+           //add imagem
+        //if tem imagem  volta imagem pra posição
         
-        if(CGRectIntersectsRect(firstImage.frame, firstBlock.frame))
-        {
-            text.text="a"
-            //var touch : UITouch! = touches.first as? UITouch
-            
-            //location = touch.locationInView(self.view)
-            
-            firstImage.frame = firstBlock.frame
-        }
-        else
-        {
-            text.text="c"
-        }
+        //hide no card selecionado
+    
     }
     
+    
+    
+    @IBAction func clickedCard(sender: AnyObject) {
+    
+        //verificar qual o card
+    
+    }
+    
+    func initObjects(){
+        
+        firstCardModel = SeedCard(imageName: "background.png", position: firstCard.frame)
+        secCardModel = SeedCard(imageName: "background.png", position: secondCard.frame)
+        thirdCardModel = SeedCard(imageName: "background.png", position: thirdCard.frame)
+        fourthCardModel = SeedCard(imageName: "background.png", position: fourthCard.frame)
+        
+        // boards
+        
+        firstBoardModel = SeedBoard(seedCard: firstCardModel!, indice: 1)
+        secBoardModel = SeedBoard(seedCard: secCardModel!, indice: 2)
+        thirdBoardModel = SeedBoard(seedCard: thirdCardModel!, indice: 3)
+        fourthBoardModel = SeedBoard(seedCard: fourthCardModel!, indice: 4)
+    
+    }
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        initObjects()
         // Do any additional setup after loading the view.
-        
-        firstImage.center = CGPointMake(160, 330)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func collision(){
-        text.text="b"
-        
-        if(CGRectIntersectsRect(firstImage.frame, firstBlock.frame)==true)
-        {
-            text.text="a"
-        }
-        else
-        {
-            text.text="c"
-        }
     }
     
     /*
