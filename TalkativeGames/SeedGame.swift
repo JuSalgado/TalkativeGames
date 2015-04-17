@@ -92,10 +92,16 @@ class SeedGame: UIViewController {
             }
             
         }else {
+            var imageClicked = boardClicked.imageView?.image?.accessibilityIdentifier
+            println("nome da imagem clicada \(imageClicked)")
             // there is an image so lets show again the card and delete the board image
             boardClicked.setImage(nil, forState: UIControlState.Normal)
-            showCardOnInicialPosition()
+//            manipulateCard?.cardImageName = ""
+            var boardItem = SeedCard(imageName: imageClicked!)
+            showCardOnInicialPosition(boardItem.cardOrderNumber)
         }
+        
+         manipulateCard = nil
         
     }
     
@@ -194,8 +200,8 @@ class SeedGame: UIViewController {
     }
     
     //The user clicked on Board and already had an image, so show it on the initial position
-    func showCardOnInicialPosition(){
-        switch manipulateCard!.cardOrderNumber{
+    func showCardOnInicialPosition(cardPosition : Int){
+        switch cardPosition{
         case 1:
             firstCard.hidden = false
             firstCard.enabled = true
