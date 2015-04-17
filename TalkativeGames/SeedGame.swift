@@ -111,7 +111,7 @@ class SeedGame: UIViewController {
         
         imageClicked = buttonClicked.currentImage!.description
         println("nome da imagem clicada \(imageClicked)")
-        manipulateCard = SeedCard(imageName: imageClicked, position: sender.frame)
+        manipulateCard = SeedCard(imageName: imageClicked)
     }
     
     //init data
@@ -119,10 +119,10 @@ class SeedGame: UIViewController {
         
         
         //set cards
-        firstCardModel = SeedCard(imageName: "one.png", position: firstCard.frame)
-        secCardModel = SeedCard(imageName: "two.png", position: secondCard.frame)
-        thirdCardModel = SeedCard(imageName: "three.png", position: thirdCard.frame)
-        fourthCardModel = SeedCard(imageName: "four.png", position: fourthCard.frame)
+        firstCardModel = SeedCard(imageName: "one.png")
+        secCardModel = SeedCard(imageName: "two.png")
+        thirdCardModel = SeedCard(imageName: "three.png")
+        fourthCardModel = SeedCard(imageName: "four.png")
         
         //set card images - view
         
@@ -152,7 +152,7 @@ class SeedGame: UIViewController {
                 var boardButton = self.view.viewWithTag(buttonsTags) as? UIButton
                 
                 //get the card on its button
-                var boardCard = SeedCard(imageName: "board button image", position: sender.frame)
+                var boardCard = SeedCard(imageName: "board button image")
                 
                 switch buttonsTags {
                     

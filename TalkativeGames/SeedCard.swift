@@ -11,7 +11,6 @@ import UIKit
 class SeedCard: NSObject {
    
     var cardImageName: String
-    var cardPosition: CGRect
     var cardOrderNumber : Int {
              //according to image name we know its position on sequence
             get {
@@ -30,9 +29,8 @@ class SeedCard: NSObject {
             }
     }
     
-    init( imageName: String , position : CGRect ) {
+    init( imageName: String) {
         self.cardImageName = imageName
-        self.cardPosition = position
     }
     
     func findCardOrderByImageName(imageName: String) -> Int{

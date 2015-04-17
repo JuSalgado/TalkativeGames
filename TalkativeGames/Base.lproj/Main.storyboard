@@ -125,8 +125,10 @@
                             <button opaque="NO" tag="3" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k18-sN-yzO">
                                 <rect key="frame" x="331" y="269" width="55" height="50"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="152" id="QLf-zg-VNb"/>
                                     <constraint firstAttribute="height" constant="152" id="VHK-c2-Nz2"/>
                                     <constraint firstAttribute="width" constant="149" id="m7W-RD-jHb"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="149" id="ryK-1M-Tkh"/>
                                 </constraints>
                                 <state key="normal" title="B3">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -134,14 +136,18 @@
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="QLf-zg-VNb"/>
                                         <exclude reference="VHK-c2-Nz2"/>
                                         <exclude reference="m7W-RD-jHb"/>
+                                        <exclude reference="ryK-1M-Tkh"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
                                     <mask key="constraints">
+                                        <include reference="QLf-zg-VNb"/>
                                         <include reference="VHK-c2-Nz2"/>
                                         <include reference="m7W-RD-jHb"/>
+                                        <include reference="ryK-1M-Tkh"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -152,6 +158,8 @@
                                 <rect key="frame" x="462" y="271" width="56" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="166" id="9MQ-KD-gej"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="147" id="W6H-Gy-0ug"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="166" id="d8T-BG-BdV"/>
                                     <constraint firstAttribute="width" constant="147" id="jSc-vD-uNu"/>
                                 </constraints>
                                 <state key="normal" title="B4">
@@ -161,12 +169,16 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="9MQ-KD-gej"/>
+                                        <exclude reference="W6H-Gy-0ug"/>
+                                        <exclude reference="d8T-BG-BdV"/>
                                         <exclude reference="jSc-vD-uNu"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
                                     <mask key="constraints">
                                         <include reference="9MQ-KD-gej"/>
+                                        <include reference="W6H-Gy-0ug"/>
+                                        <include reference="d8T-BG-BdV"/>
                                         <include reference="jSc-vD-uNu"/>
                                     </mask>
                                 </variation>
@@ -178,7 +190,9 @@
                                 <rect key="frame" x="89" y="279" width="33" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="6N2-YR-d1d"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="170" id="E0c-8A-iab"/>
                                     <constraint firstAttribute="height" constant="170" id="Kra-ox-J6o"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="pS9-yM-s2K"/>
                                 </constraints>
                                 <state key="normal" title="B1">
                                     <color key="titleColor" red="0.082937119439999998" green="0.28259356730000001" blue="0.81788589020000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -187,13 +201,17 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="6N2-YR-d1d"/>
+                                        <exclude reference="E0c-8A-iab"/>
                                         <exclude reference="Kra-ox-J6o"/>
+                                        <exclude reference="pS9-yM-s2K"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
                                     <mask key="constraints">
                                         <include reference="6N2-YR-d1d"/>
+                                        <include reference="E0c-8A-iab"/>
                                         <include reference="Kra-ox-J6o"/>
+                                        <include reference="pS9-yM-s2K"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -204,6 +222,8 @@
                                 <rect key="frame" x="205" y="266" width="58" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="165" id="FDe-Fi-lUJ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="165" id="KVh-Z1-Mc7"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="165" id="OPd-6F-MQH"/>
                                     <constraint firstAttribute="height" constant="165" id="SpC-hZ-jGD"/>
                                 </constraints>
                                 <state key="normal" title="B2">
@@ -213,12 +233,16 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="FDe-Fi-lUJ"/>
+                                        <exclude reference="KVh-Z1-Mc7"/>
+                                        <exclude reference="OPd-6F-MQH"/>
                                         <exclude reference="SpC-hZ-jGD"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
                                     <mask key="constraints">
                                         <include reference="FDe-Fi-lUJ"/>
+                                        <include reference="KVh-Z1-Mc7"/>
+                                        <include reference="OPd-6F-MQH"/>
                                         <include reference="SpC-hZ-jGD"/>
                                     </mask>
                                 </variation>
@@ -580,6 +604,6 @@
         <image name="meninao.png" width="800" height="800"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pDu-dt-Zlk"/>
+        <segue reference="ZGn-B7-3gu"/>
     </inferredMetricsTieBreakers>
 </document>
