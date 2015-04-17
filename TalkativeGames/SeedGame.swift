@@ -165,11 +165,21 @@ class SeedGame: UIViewController {
             
             if(totalNeeded == 4){
                 println("Congratulations! 4 images correct!")
+                let tapAlert = UIAlertController(title: "Congratulations!", message: "4 images correct!", preferredStyle: UIAlertControllerStyle.Alert)
+                tapAlert.addAction(UIAlertAction(title: "OK", style: .Destructive, handler: nil))
+                self.presentViewController(tapAlert, animated: true, completion: nil)
             }else {
                 println("Sorry you loose! But try again you made \(4 - totalNeeded) images correct!")
+                let tapAlert = UIAlertController(title: "Sorry you loose!", message: "But try again you made \(4 - totalNeeded) images correct!", preferredStyle: UIAlertControllerStyle.Alert)
+                tapAlert.addAction(UIAlertAction(title: "OK", style: .Destructive, handler: nil))
+                self.presentViewController(tapAlert, animated: true, completion: nil)
             }
         }else{
             println("You need to choose all images before finish the game")
+            let tapAlert = UIAlertController(title: "Sorry you loose!", message: "You need to choose all images before finish the game", preferredStyle: UIAlertControllerStyle.Alert)
+            tapAlert.addAction(UIAlertAction(title: "OK", style: .Destructive, handler: nil))
+            self.presentViewController(tapAlert, animated: true, completion: nil)
+            
         }
         
         
