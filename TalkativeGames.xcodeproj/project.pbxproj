@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1D2EB8BA1AE0463D00B71ED8 /* SeedCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2EB8B91AE0463D00B71ED8 /* SeedCard.swift */; };
-		1D2EB8BC1AE0465700B71ED8 /* SeedBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2EB8BB1AE0465700B71ED8 /* SeedBoard.swift */; };
 		1E666C4E1ADECCDE004B4191 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E666C4D1ADECCDE004B4191 /* AppDelegate.swift */; };
 		1E666C531ADECCDE004B4191 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E666C511ADECCDE004B4191 /* Main.storyboard */; };
 		1E666C551ADECCDE004B4191 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E666C541ADECCDE004B4191 /* Images.xcassets */; };
@@ -35,7 +34,6 @@
 
 /* Begin PBXFileReference section */
 		1D2EB8B91AE0463D00B71ED8 /* SeedCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeedCard.swift; sourceTree = "<group>"; };
-		1D2EB8BB1AE0465700B71ED8 /* SeedBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeedBoard.swift; sourceTree = "<group>"; };
 		1E666C481ADECCDE004B4191 /* TalkativeGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalkativeGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E666C4C1ADECCDE004B4191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E666C4D1ADECCDE004B4191 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,7 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				1D2EB8B91AE0463D00B71ED8 /* SeedCard.swift */,
-				1D2EB8BB1AE0465700B71ED8 /* SeedBoard.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -261,7 +258,6 @@
 				1E666C7F1ADEF848004B4191 /* SeedInfoController.swift in Sources */,
 				1E666C731ADED5AB004B4191 /* SeedGame.swift in Sources */,
 				1E666C4E1ADECCDE004B4191 /* AppDelegate.swift in Sources */,
-				1D2EB8BC1AE0465700B71ED8 /* SeedBoard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
