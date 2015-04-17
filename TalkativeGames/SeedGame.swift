@@ -9,7 +9,7 @@
 import UIKit
 
 class SeedGame: UIViewController {
-   
+    
     
     var firstCardModel : SeedCard? = nil
     var secCardModel : SeedCard? = nil
@@ -32,9 +32,9 @@ class SeedGame: UIViewController {
     
     //action that manages board clicks
     @IBAction func clickedBoard(sender: AnyObject) {
-    
+        
         var boardClicked:UIButton = sender as! UIButton
-
+        
         if boardClicked.currentImage == nil {
             
             //did I clicked on a card?
@@ -56,7 +56,7 @@ class SeedGame: UIViewController {
         
     }
     
-     //The user clicked on Board and already didn't have an image, so hide the card
+    //The user clicked on Board and already didn't have an image, so hide the card
     func hideCard(){
         
         switch manipulateCard!.cardOrderNumber{
@@ -104,12 +104,13 @@ class SeedGame: UIViewController {
     
     //Action that manages the game's cards
     @IBAction func clickedCard(sender: AnyObject) {
-    
-         var buttonClicked:UIButton = sender as! UIButton
         
-       //NAO CONSEGUI PEGAR O NOME DA IMAGEM associada ao botao
+        var buttonClicked:UIButton = sender as! UIButton
         
-        imageClicked = buttonClicked.currentTitle!
+        //NAO CONSEGUI PEGAR O NOME DA IMAGEM associada ao botao
+        
+        imageClicked = buttonClicked.currentImage!.description
+        println("nome da imagem clicada \(imageClicked)")
         manipulateCard = SeedCard(imageName: imageClicked, position: sender.frame)
     }
     
@@ -132,45 +133,96 @@ class SeedGame: UIViewController {
         thirdCard.setImage(UIImage(named: thirdCardModel!.cardImageName) as UIImage?, forState: UIControlState.Normal)
         firstCard.setImage(UIImage(named: firstCardModel!.cardImageName) as UIImage?, forState: UIControlState.Normal)
         
-        //TODO nao esta aparecendo a imagem no 4 mas eu acho que é problema no layout mesmo
-    
     }
     
+    // see how many cards the user made right
     @IBAction func finishGamePlay(sender: AnyObject) {
         
-        var didWin = false
-        var boardClicked:UIButton = sender as! UIButton
+        var totalNeeded = 0; //to win need to have 4 images correct
         
-        //TODO obter nome da imagem associado ao botao
-        let finishedCard = SeedCard(imageName: imageClicked, position: boardClicked.frame)
         
-        switch sender.tag{
-        case 1:
-            if(boardClicked.currentImage != nil && finishedCard.cardOrderNumber == 1){
-              didWin = true
-            }
-        case 2:
-            if(boardClicked.currentImage != nil && finishedCard.cardOrderNumber == 2){
-                didWin = true
-            }
-        case 3:
-            if(boardClicked.currentImage != nil && finishedCard.cardOrderNumber == 3){
-                didWin = true
-            }
-        case 4:
-            if(boardClicked.currentImage != nil && finishedCard.cardOrderNumber == 4){
-                didWin = true
-            }
-        default:
-            //nothing
-            println("error calculating result")
+        //all the board have image
+        
+        if verifyBoardCompleted(){
             
+            //so lets get the button properties by its tag
+            for buttonsTags in 1...4 {
+                
+                //get the button
+                var boardButton = self.view.viewWithTag(buttonsTags) as? UIButton
+                
+                //get the card on its button
+                var boardCard = SeedCard(imageName: "board button image", position: sender.frame)
+                
+                switch buttonsTags {
+                    
+                    // first button needs image that the order number is one and so on
+                case 1:
+                    if boardCard.cardOrderNumber == 1{
+                        totalNeeded++
+                    }
+                    
+                    
+                case 2:
+                    if boardCard.cardOrderNumber == 2{
+                        totalNeeded++
+                    }
+                case 3 :
+                    if boardCard.cardOrderNumber == 3{
+                        totalNeeded++
+                    }
+                case 4:
+                    if boardCard.cardOrderNumber == 4{
+                        totalNeeded++
+                    }
+                default :
+                    println("error iterating board's tags")
+                    
+                }
+                
+            }
+            
+            if(totalNeeded == 4){
+                println("Congratulations! 4 images correct!")
+            }else {
+                println("Sorry you loose! But try again you made \(4 - totalNeeded) images correct!")
+            }
+        }else{
+            println("You need to choose all images before finish the game")
         }
         
-        println("You win : \(didWin)")
-
+        
     }
-   
+    
+    // to finish the game we need one image on each board
+    func verifyBoardCompleted() -> Bool{
+        
+        var totalNeeded = 0;
+        
+        if firstBoard.currentImage != nil{
+            totalNeeded++
+        }
+        
+        if secondBoard.currentImage != nil{
+            totalNeeded++
+        }
+        
+        if thirdBoard.currentImage != nil{
+            totalNeeded++
+        }
+        
+        if fourthBoard.currentImage != nil{
+            totalNeeded++
+        }
+        
+        if totalNeeded == 4{
+            // the user selected all images
+            return true
+        }else{
+            return false
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initObjects()
