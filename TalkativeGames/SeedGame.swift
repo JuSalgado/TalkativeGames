@@ -30,6 +30,48 @@ class SeedGame: UIViewController {
     @IBOutlet weak var secondCard: UIButton!
     @IBOutlet weak var firstCard: UIButton!
     
+    //init data
+    func initObjects(){
+        
+        
+        //set cards
+        firstCardModel = SeedCard(imageName: "one.png")
+        secCardModel = SeedCard(imageName: "two.png")
+        thirdCardModel = SeedCard(imageName: "three.png")
+        fourthCardModel = SeedCard(imageName: "four.png")
+        
+        //set card images - view
+        
+        //TODO: make randomic cards images so it isn't always the same and the pacient doesn't memorize
+        
+        firstCard.setImage(UIImage(named: firstCardModel!.cardImageName) as UIImage?, forState: UIControlState.Normal)
+        firstCard.imageView?.image!.accessibilityIdentifier = firstCardModel?.cardImageName
+        
+        secondCard.setImage(UIImage(named: secCardModel!.cardImageName) as UIImage?, forState: UIControlState.Normal)
+        secondCard.imageView?.image!.accessibilityIdentifier = secCardModel?.cardImageName
+        
+        thirdCard.setImage(UIImage(named: thirdCardModel!.cardImageName) as UIImage?, forState: UIControlState.Normal)
+        thirdCard.imageView?.image!.accessibilityIdentifier = thirdCardModel?.cardImageName
+        
+        fourthCard.setImage(UIImage(named: fourthCardModel!.cardImageName) as UIImage?, forState: UIControlState.Normal)
+        fourthCard.imageView?.image!.accessibilityIdentifier = fourthCardModel?.cardImageName
+        
+        
+        firstBoard.imageView?.image?.accessibilityIdentifier = ""
+        secondBoard.imageView?.image?.accessibilityIdentifier = ""
+        thirdBoard.imageView?.image?.accessibilityIdentifier = ""
+        fourthBoard.imageView?.image?.accessibilityIdentifier = ""
+        
+        //so lets get the button properties by its tag
+        /*for buttonsTags in 1...4 {
+        
+        //get the button
+        var boardButton = self.view.viewWithTag(buttonsTags) as? UIButton
+        boardButton!.imageView?.image!.accessibilityIdentifier = ""
+        
+        }*/
+    }
+    
     //action that manages board clicks
     @IBAction func clickedBoard(sender: AnyObject) {
         
@@ -41,6 +83,7 @@ class SeedGame: UIViewController {
             if manipulateCard?.cardImageName != nil{
                 //yes we did so set the board image with the card image
                 boardClicked.setImage(UIImage(named: manipulateCard!.cardImageName) as UIImage?, forState: UIControlState.Normal)
+                boardClicked.imageView?.image!.accessibilityIdentifier = manipulateCard?.cardImageName
                 hideCard()
                 
             }else{
@@ -53,6 +96,76 @@ class SeedGame: UIViewController {
             boardClicked.setImage(nil, forState: UIControlState.Normal)
             showCardOnInicialPosition()
         }
+        
+    }
+    
+    //Action that manages the game's cards
+    @IBAction func clickedCard(sender: AnyObject) {
+        
+        var buttonClicked:UIButton = sender as! UIButton
+        
+        var imageClicked = buttonClicked.imageView?.image?.accessibilityIdentifier
+        println("nome da imagem clicada \(imageClicked)")
+        manipulateCard = SeedCard(imageName: imageClicked!)
+    }
+    
+    // see how many cards the user made right
+    @IBAction func finishGamePlay(sender: AnyObject) {
+        
+        var totalNeeded = 0; //to win need to have 4 images correct
+        
+        
+        //all the board have image
+        
+        if verifyBoardCompleted(){
+            
+            //so lets get the button properties by its tag
+            for buttonsTags in 1...4 {
+                
+                //get the button
+                var boardButton = self.view.viewWithTag(buttonsTags) as? UIButton
+                
+                //get the card on its button
+                var boardCardImage = boardButton!.imageView?.image?.accessibilityIdentifier
+                var boardCard = SeedCard(imageName: boardCardImage!)
+                
+                switch buttonsTags {
+                    
+                    // first button needs image that the order number is one and so on
+                case 1:
+                    if boardCard.cardOrderNumber == 1{
+                        totalNeeded++
+                    }
+                    
+                    
+                case 2:
+                    if boardCard.cardOrderNumber == 2{
+                        totalNeeded++
+                    }
+                case 3 :
+                    if boardCard.cardOrderNumber == 3{
+                        totalNeeded++
+                    }
+                case 4:
+                    if boardCard.cardOrderNumber == 4{
+                        totalNeeded++
+                    }
+                default :
+                    println("error iterating board's tags")
+                    
+                }
+                
+            }
+            
+            if(totalNeeded == 4){
+                println("Congratulations! 4 images correct!")
+            }else {
+                println("Sorry you loose! But try again you made \(4 - totalNeeded) images correct!")
+            }
+        }else{
+            println("You need to choose all images before finish the game")
+        }
+        
         
     }
     
@@ -101,99 +214,6 @@ class SeedGame: UIViewController {
         }
     }
     
-    
-    //Action that manages the game's cards
-    @IBAction func clickedCard(sender: AnyObject) {
-        
-        var buttonClicked:UIButton = sender as! UIButton
-        
-        //NAO CONSEGUI PEGAR O NOME DA IMAGEM associada ao botao
-        
-        imageClicked = buttonClicked.currentImage!.description
-        println("nome da imagem clicada \(imageClicked)")
-        manipulateCard = SeedCard(imageName: imageClicked)
-    }
-    
-    //init data
-    func initObjects(){
-        
-        
-        //set cards
-        firstCardModel = SeedCard(imageName: "one.png")
-        secCardModel = SeedCard(imageName: "two.png")
-        thirdCardModel = SeedCard(imageName: "three.png")
-        fourthCardModel = SeedCard(imageName: "four.png")
-        
-        //set card images - view
-        
-        //TODO: make randomic cards position so it isn't always the same and the pacient doesn't memorize
-        
-        fourthCard.setImage(UIImage(named: fourthCardModel!.cardImageName) as UIImage?, forState: UIControlState.Normal)
-        secondCard.setImage(UIImage(named: secCardModel!.cardImageName) as UIImage?, forState: UIControlState.Normal)
-        thirdCard.setImage(UIImage(named: thirdCardModel!.cardImageName) as UIImage?, forState: UIControlState.Normal)
-        firstCard.setImage(UIImage(named: firstCardModel!.cardImageName) as UIImage?, forState: UIControlState.Normal)
-        
-    }
-    
-    // see how many cards the user made right
-    @IBAction func finishGamePlay(sender: AnyObject) {
-        
-        var totalNeeded = 0; //to win need to have 4 images correct
-        
-        
-        //all the board have image
-        
-        if verifyBoardCompleted(){
-            
-            //so lets get the button properties by its tag
-            for buttonsTags in 1...4 {
-                
-                //get the button
-                var boardButton = self.view.viewWithTag(buttonsTags) as? UIButton
-                
-                //get the card on its button
-                var boardCard = SeedCard(imageName: "board button image")
-                
-                switch buttonsTags {
-                    
-                    // first button needs image that the order number is one and so on
-                case 1:
-                    if boardCard.cardOrderNumber == 1{
-                        totalNeeded++
-                    }
-                    
-                    
-                case 2:
-                    if boardCard.cardOrderNumber == 2{
-                        totalNeeded++
-                    }
-                case 3 :
-                    if boardCard.cardOrderNumber == 3{
-                        totalNeeded++
-                    }
-                case 4:
-                    if boardCard.cardOrderNumber == 4{
-                        totalNeeded++
-                    }
-                default :
-                    println("error iterating board's tags")
-                    
-                }
-                
-            }
-            
-            if(totalNeeded == 4){
-                println("Congratulations! 4 images correct!")
-            }else {
-                println("Sorry you loose! But try again you made \(4 - totalNeeded) images correct!")
-            }
-        }else{
-            println("You need to choose all images before finish the game")
-        }
-        
-        
-    }
-    
     // to finish the game we need one image on each board
     func verifyBoardCompleted() -> Bool{
         
@@ -227,6 +247,7 @@ class SeedGame: UIViewController {
         super.viewDidLoad()
         initObjects()
         // Do any additional setup after loading the view.
+        
     }
     
     override func didReceiveMemoryWarning() {
