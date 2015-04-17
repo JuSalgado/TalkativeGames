@@ -96,7 +96,6 @@ class SeedGame: UIViewController {
             println("nome da imagem clicada \(imageClicked)")
             // there is an image so lets show again the card and delete the board image
             boardClicked.setImage(nil, forState: UIControlState.Normal)
-//            manipulateCard?.cardImageName = ""
             var boardItem = SeedCard(imageName: imageClicked!)
             showCardOnInicialPosition(boardItem.cardOrderNumber)
         }

@@ -11,7 +11,7 @@ import UIKit
 class SeedInfoController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
     
-    var images = ["background.png","meninao.png","background_viewers.png"]
+    var images = ["guia1.png","guia2.png","guia3.png"]
     
     var count = 0
     
