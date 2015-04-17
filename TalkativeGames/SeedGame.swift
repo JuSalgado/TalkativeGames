@@ -18,8 +18,9 @@ class SeedGame: UIViewController {
     
     //the card selected during the game
     var manipulateCard : SeedCard?=nil
+    var imageClicked : String = ""
     
-    @IBOutlet weak var forthBoard: UIButton!
+    @IBOutlet weak var fourthBoard: UIButton!
     @IBOutlet weak var thirdBoard: UIButton!
     @IBOutlet weak var secondBoard: UIButton!
     @IBOutlet weak var firstBoard: UIButton!
@@ -28,7 +29,6 @@ class SeedGame: UIViewController {
     @IBOutlet weak var thirdCard: UIButton!
     @IBOutlet weak var secondCard: UIButton!
     @IBOutlet weak var firstCard: UIButton!
-    
     
     //action that manages board clicks
     @IBAction func clickedBoard(sender: AnyObject) {
@@ -84,7 +84,6 @@ class SeedGame: UIViewController {
     func showCardOnInicialPosition(){
         switch manipulateCard!.cardOrderNumber{
         case 1:
-            
             firstCard.hidden = false
             firstCard.enabled = true
         case 2:
@@ -109,7 +108,9 @@ class SeedGame: UIViewController {
          var buttonClicked:UIButton = sender as! UIButton
         
        //NAO CONSEGUI PEGAR O NOME DA IMAGEM associada ao botao
-        manipulateCard = SeedCard(imageName: "meninao.png", position: sender.frame)
+        
+        imageClicked = buttonClicked.currentTitle!
+        manipulateCard = SeedCard(imageName: imageClicked, position: sender.frame)
     }
     
     //init data
@@ -117,15 +118,15 @@ class SeedGame: UIViewController {
         
         
         //set cards
-        firstCardModel = SeedCard(imageName: "meninao.png", position: firstCard.frame)
-        secCardModel = SeedCard(imageName: "background.png", position: secondCard.frame)
-        thirdCardModel = SeedCard(imageName: "meninao.png", position: thirdCard.frame)
-        fourthCardModel = SeedCard(imageName: "meninao.png", position: fourthCard.frame)
+        firstCardModel = SeedCard(imageName: "one.png", position: firstCard.frame)
+        secCardModel = SeedCard(imageName: "two.png", position: secondCard.frame)
+        thirdCardModel = SeedCard(imageName: "three.png", position: thirdCard.frame)
+        fourthCardModel = SeedCard(imageName: "four.png", position: fourthCard.frame)
         
         //set card images - view
         
         //TODO: make randomic cards position so it isn't always the same and the pacient doesn't memorize
-       
+        
         fourthCard.setImage(UIImage(named: fourthCardModel!.cardImageName) as UIImage?, forState: UIControlState.Normal)
         secondCard.setImage(UIImage(named: secCardModel!.cardImageName) as UIImage?, forState: UIControlState.Normal)
         thirdCard.setImage(UIImage(named: thirdCardModel!.cardImageName) as UIImage?, forState: UIControlState.Normal)
@@ -141,7 +142,7 @@ class SeedGame: UIViewController {
         var boardClicked:UIButton = sender as! UIButton
         
         //TODO obter nome da imagem associado ao botao
-        let finishedCard = SeedCard(imageName: "meninao.png", position: boardClicked.frame)
+        let finishedCard = SeedCard(imageName: imageClicked, position: boardClicked.frame)
         
         switch sender.tag{
         case 1:

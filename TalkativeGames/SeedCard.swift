@@ -16,13 +16,13 @@ class SeedCard: NSObject {
              //according to image name we know its position on sequence
             get {
                 switch self.cardImageName{
-                case "background.png":
+                case "one.png":
                     return 1
-                case "meninao.png":
+                case "two.png":
                     return 2
-                case "teste3":
+                case "three.png":
                     return 3
-                case "teste4":
+                case "four.png":
                     return 4
                 default:
                     return 0
@@ -38,13 +38,13 @@ class SeedCard: NSObject {
     func findCardOrderByImageName(imageName: String) -> Int{
     
         switch imageName{
-        case "background.png":
+        case "one.png":
             return 1
-        case "meninao.png":
+        case "two.png":
             return 2
-        case "teste3":
+        case "three.png":
             return 3
-        case "teste4":
+        case "four.png":
             return 4
         default:
             return 0
